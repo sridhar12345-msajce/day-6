@@ -1,0 +1,38 @@
+import java.util.HashMap;
+
+public class hashmap{
+    public static void main(String[] args) {
+
+        // Creating a HashMap (Key: Integer, Value: String)
+        HashMap<Integer, String> students = new HashMap<>();
+
+        // Adding entries (Key, Value)
+        students.put(101, "John");
+        students.put(102, "Emma");
+        students.put(103, "Ryan");
+        students.put(104, "Sophia");
+
+        // Displaying the entire HashMap
+        System.out.println("Student Records: " + students);
+
+        // Accessing value using key
+        System.out.println("Student with Roll No 102: " + students.get(102));
+
+        // Removing a key-value pair
+        students.remove(103);
+        System.out.println("After removing roll no 103: " + students);
+
+        // Checking if a key exists
+        if (students.containsKey(104)) {
+            System.out.println("Roll No 104 exists in the records.");
+        }
+
+        // Checking if a value exists
+        if (students.containsValue("Emma")) {
+            System.out.println("Emma is in the student list.");
+        }
+
+        // Size of HashMap
+        System.out.println("Total student entries: " + students.size());
+    }
+}
